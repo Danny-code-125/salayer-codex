@@ -1,0 +1,124 @@
+/* AcercaDe.css */
+.acerca__banner {
+  height: 200px;
+  background: linear-gradient(135deg, #0d0d1a, #1a0505);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acerca__title {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  letter-spacing: 8px;
+}
+
+.acerca__content {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.acerca__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2rem 0;
+}
+
+.acerca__logo-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: var(--color-red-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-title);
+  font-size: 2rem;
+}
+
+.acerca__logo-img {
+  width: 120px;
+  height: auto;
+}
+
+.acerca__app-name {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  letter-spacing: 5px;
+}
+
+.acerca__app-sub {
+  font-size: 0.8rem;
+  color: var(--color-gray);
+  letter-spacing: 2px;
+}
+
+.acerca__card {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.acerca__card--credits { border-color: var(--color-red-dark); }
+
+.acerca__card-title {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: var(--color-red);
+  margin-bottom: 1rem;
+}
+
+.acerca__card-text {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  line-height: 1.7;
+}
+
+.acerca__card-text em { color: white; font-style: normal; }
+
+.acerca__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.acerca__features li {
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.acerca__features li:last-child { border-bottom: none; }
+
+.acerca__tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.acerca__tech-badge {
+  padding: 0.4rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: var(--color-gray);
+}
+
+.acerca__copy {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-red);
+  letter-spacing: 2px;
+}

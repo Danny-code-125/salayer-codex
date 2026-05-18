@@ -1,0 +1,151 @@
+.juegos__banner {
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #3a0a0a 0%, #0d0d0d 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.juegos__banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.juegos__banner-title {
+  position: relative;
+  z-index: 2;
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 5px;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+/* ── GRID ── */
+.juegos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 800px) {
+  .juegos__grid { grid-template-columns: 1fr; max-width: 420px; }
+}
+
+/* ── JUEGO CARD ── */
+.juego-card {
+  background: var(--color-bg-card);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.juego-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(196,30,58,0.3);
+}
+
+.juego-card__label {
+  background: var(--color-red-header);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.juego-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: #1a1010;
+}
+
+.juego-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.juego-card:hover .juego-card__img-wrap img { transform: scale(1.06); }
+
+.juego-card__img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray);
+  font-family: var(--font-title);
+  font-size: 1rem;
+  letter-spacing: 3px;
+}
+
+.juego-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.juego-card__nombre {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.juego-card__desc {
+  font-size: 0.85rem;
+  color: var(--color-gray);
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ── MODAL ── */
+.juego-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  animation: fadeInUp 0.2s ease;
+}
+
+.juego-modal__content {
+  background: var(--color-bg-2);
+  border: 1px solid var(--color-red);
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 440px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.juego-modal__title {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  letter-spacing: 3px;
+  color: var(--color-red);
+}
+
+.juego-modal__desc {
+  color: var(--color-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
